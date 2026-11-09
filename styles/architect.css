@@ -7,7 +7,7 @@
 
 /* SHARED STYLES */
 
-.flex,#quick-list,.side-txt{display: flex;}
+.flex{display: flex;}
 .dark-1{color: #131313;}
 .dark-2{color: #424242;}
 .dark-3{color:#727272}
@@ -16,11 +16,12 @@
 
 /* HEADING STYLES*/
 
+ header{width: 100%; background-color: rgba(255, 144, 14, 0.1); margin-bottom: 85px;}
 .heading-txt{text-align: center; width: 600px;}
 .heading-txt h1{font-size: 4rem; font-weight: bold; display: flex; flex-wrap: wrap; margin-bottom: 25px;}
-.heading-txt p{color: #727272; margin-bottom: 2rem;}
+.heading-txt p{color: #727272; line-height: 1.6rem; margin-bottom: 2rem;}
 .btn{padding: 20px 25px; color: #FFFFFF; background-color: #FF900E; border: none; border-radius: 8px; margin-bottom: 50px;}
-.banner img{max-width: 1240px;padding-bottom: 45px;}
+.banner img{padding-bottom: 45px; width: 100%;}
 
 /* NAVBAR RELATED STYLES */
 
@@ -31,22 +32,26 @@
 
 /* MAIN SECTION */
 
-#quick-list{margin: 85px 0 130px 0;}
-.section-container{margin: 0 auto; max-width: 1140px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 50px;}
-.image-section{display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 20px;}
-.image-section img{width: 100%; height: auto;}
-.side-txt{justify-content: center; flex-direction: column; gap: 24px;}
+#quick-list{max-width: 1240px; margin: 0 auto; margin-bottom: 130px;}
+.section-container{display: flex; gap: 4.5rem;}
+.image-section{width: 100%; display: grid; grid-template-columns: repeat(2, 1fr);gap: 20px;}
+.image-section img{width: 100%;}
+.side-txt{display: flex; flex-direction: column; justify-content: center; width: 537px;}
+.side-txt h3{font-size: 2.8rem; font-weight: 500; width: 537px; margin-bottom: 24px;} .of-our{font-weight: bold; color: #131313;} .features{color: #FF900E; font-weight: bold;}
+.side-txt p{width: 537px; line-height: 1.6rem; margin-bottom: 32px;}
 .btn{width: fit-content;}
-.side-txt h3{color: #727272;font-size: 2.8rem;}.of-our{color: #131313;}.features{color: #FF900E;}
 
 
-.experience-container{margin: 0 auto; max-width: 1340px; height: 1035px; display: grid; grid-template-columns: repeat(7, 1fr); gap:50px; margin-bottom: 130px;}
-.section-heading h2{width: 468px; margin-bottom: 24px; font-size: 2.8rem; border-left: 5px solid #FF900E; padding-left: 21px;}.section-heading p{line-height: 26px; margin-bottom: 30px; color: #727272;}
-.exp-list{grid-column: span 3;}
-.box{margin-bottom: 20px; padding: 30px 42px 30px 30px; box-shadow: 5px 5px 50px #7272721a; border-radius: 8px;}
-.box h4{font-size: 20px; font-weight: 600; margin-bottom: 10px;}.box p{line-height: 26px; color: #727272;}
-.image-container{background: url(../images/architect.png);border-radius: 8px; background-repeat: no-repeat; background-position: 80px -20px; grid-column: span 4; display: flex; align-items: flex-end; line-height: 40px;}
-.secondary-btn{color: #FFFFFF; flex-direction: column;background-color: #FF900E;padding: 3rem 2.8rem; border: none; border-radius: 8px;}.big{font-size: 4rem; font-weight: bold;}.small{font-size: 25px;}
+#experience{width: 1330px; margin: 0 auto; margin-bottom: 130px;}
+.experience-container{display: flex; gap: 120px;}
+.section-heading h2{width: 468px; padding-left: 21px; border-left: 5px solid #FF900E;margin-bottom: 24px; font-size: 45px; font-weight: bold;}
+.section-heading p{line-height: 26px; margin-bottom: 30px;}
+.box{margin-bottom: 20px; padding: 30px 42px 30px 30px; box-shadow: 5px 5px 80px #7272722a; border-radius: 8px;}
+.box:last-child {margin-bottom: 0;}
+.box h4{font-size: 20px; font-weight: 600; margin-bottom: 10px;}
+.box p{line-height: 26px;}
+.badge{padding: 43px 42px; border-radius: 8px; background-color: #FF900E; color: #FFFFFF; border: none; display: flex; flex-direction: column; position: absolute; margin-top: -130px; margin-left: -100px;}
+.big{font-size: 4rem; font-weight: bold;} .small{font-size: 1.5rem; font-weight: 500;}
 
 
 #facts{width: 1240px; margin: 0 auto; margin-bottom: 180px;}
@@ -59,9 +64,46 @@
 #sponsors{width: 1240px; margin: 0 auto; margin-bottom: 130px;}
 .title{margin: 0 auto; width: 542px;}.title h2{font-size: 2.8rem; font-weight: bold; margin-bottom: 24px; text-align: center;}
 .title p{text-align: center; color: #727272; line-height: 26px; margin-bottom: 50px;}
-.sponsor-icons{display: flex; justify-content: space-between;}
+.sponsor-icons{display: flex; justify-content: space-between; filter: grayscale(100%);}
 
 /* FOOTER */
 
 footer{margin: 0 auto; width: 1240PX; border-radius: 8px; background-color: #ff8f0e2f; padding: 38px 350px; margin-bottom: 216px;}
 .footer p{color: #424242; font-size: 1.1rem;}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width:576px){
+
+    header{margin-bottom: 40px;}
+    .navbar,.logo{flex-direction: column; text-align: center; margin-bottom: 40px;}
+    .heading-txt{text-align: center; width: 98%;}.banner img{padding-bottom: 0;width: 100%;}
+
+    #quick-list{margin-bottom: 20px;}
+    .section-container{display: flex; flex-direction: column; gap: 1.5rem;}
+    .image-section{gap: 10px;}
+    .side-txt{width: 100%;}
+    .side-txt h3{width: 98%; text-align: center;}
+    .side-txt p{width: 98%; text-align: center;}
+    .btn{align-self: center;}
+
+    #experience{width: 100%;}
+    .experience-container{flex-direction: column; gap: 20px;}
+    .image-container img{width: 100%;}
+    .box{width: 95%; margin-inline: auto;}
+    .section-heading h2{width: 100%;}
+    .section-heading p{width: 98%; margin-left: 10px;}
+    .badge{padding: 43px 42px; border-radius: 8px; background-color: #FF900E; color: #FFFFFF; border: none; display: flex; flex-direction: column; position: absolute; margin-top: -130px; margin-left: 0;}
+
+    #facts{width: 100%; margin-bottom: 40px; text-align: center;}
+    .txt-heading p{width: 95%;text-align: center; margin-bottom: 40px;}
+    .icon-container {flex-direction: column;align-items: center;gap: 20px;}
+    .icon-box {width: 95%;}
+
+    #sponsors{width: 100%; margin-bottom: 30px;}
+    .title{width: 95%; text-align: center;}
+    .title p{width: 100%; margin-bottom: 30px;}
+    .sponsor-icons{flex-wrap: wrap; justify-content: center; gap: 30px;}
+
+    footer{width: 100%; padding: 38px; margin-bottom: 0;}
+}

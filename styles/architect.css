@@ -16,7 +16,7 @@
 
 /* HEADING STYLES*/
 
- header{width: 100%; background-color: rgba(255, 144, 14, 0.1); margin-bottom: 85px;}
+header{width: 100%; background-color: rgba(255, 144, 14, 0.1); margin-bottom: 85px;}
 .heading-txt{text-align: center; width: 600px;}
 .heading-txt h1{font-size: 4rem; font-weight: bold; display: flex; flex-wrap: wrap; margin-bottom: 25px;}
 .heading-txt p{color: #727272; line-height: 1.6rem; margin-bottom: 2rem;}
@@ -42,7 +42,7 @@
 .btn{width: fit-content;}
 
 
-#experience{max-width: 1330px; margin: 0 auto; margin-bottom: 130px;}
+#experience{max-width:1330px ; margin: 0 auto; margin-bottom: 130px;}
 .experience-container{display: flex; gap: 120px;}
 .section-heading h2{width: 468px; padding-left: 21px; border-left: 5px solid #FF900E;margin-bottom: 24px; font-size: 45px; font-weight: bold;}
 .section-heading p{line-height: 26px; margin-bottom: 30px;}
@@ -68,7 +68,7 @@
 
 /* FOOTER */
 
-footer{margin: 0 auto; width: 1240PX; border-radius: 8px; background-color: #ff8f0e2f; padding: 38px 350px; margin-bottom: 216px;}
+footer{margin: 0 auto; width: 1240px; border-radius: 8px; background-color: rgba(255, 144, 14, 0.1); padding: 38px 350px; margin-bottom: 216px;}
 .footer p{color: #424242; font-size: 1.1rem;}
 
 /* MEDIA QUERY */
@@ -106,4 +106,169 @@ footer{margin: 0 auto; width: 1240PX; border-radius: 8px; background-color: #ff8
     .sponsor-icons{flex-wrap: wrap; justify-content: center; gap: 30px;}
 
     footer{width: 100%; padding: 38px; margin-bottom: 0;}
+}
+
+@media screen and (min-width:577px) and (max-width:992px){
+
+    html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    }
+
+    header {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin-bottom: 50px;
+    }
+
+    .heading-txt {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    }
+
+    .banner img {
+    width: 100%;
+    display: block;
+    }
+    
+    .section-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 20px;
+    }
+
+    .image-section {
+        width: 100%;
+    }
+
+    .side-txt,
+    .side-txt h3,
+    .side-txt p {
+        width: 100%;
+    }
+
+    #experience {
+    padding: 0 20px;
+    box-sizing: border-box;
+    }
+
+    .experience-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .exp-list,
+    .image-container {
+        width: 100%;
+    }
+
+    .section-heading h2 {
+        width: 100%;
+        font-size: 2.2rem;
+    }
+
+    .image-container {
+        position: relative;       
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .badge {
+        position: absolute;
+        margin: 0;                
+        bottom: 20px;
+        left: 20px;
+        padding: 20px 28px;
+    }
+
+    .big { font-size: 2.5rem; }
+    .small { font-size: 1.1rem; }
+
+    #facts {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    }
+
+    #facts .icon-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 20px;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box;
+    }
+
+    #facts .icon-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box;
+        padding: 20px 10px;
+    }
+
+    #facts .icon-box img {
+        width: 50px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    #facts .icon-box h3 {
+        font-size: 2rem;
+    }
+
+    #sponsors {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    }
+
+    #sponsors .title,
+    #sponsors .title p {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    #sponsors .sponsor-icons {
+        display: flex !important;
+        flex-wrap: wrap;              
+        justify-content: center;
+        align-items: center;
+        gap: 30px 40px;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    #sponsors .sponsor-icons img {
+        width: auto !important;
+        max-width: 120px;              
+        height: auto;
+    }
+
+     footer {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 30px 20px !important;
+        margin: 0 auto !important;
+        margin-bottom: 40px !important;
+        box-sizing: border-box;
+        border-radius: 0;
+        text-align: center;
+    }
+
 }

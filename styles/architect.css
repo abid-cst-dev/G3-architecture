@@ -42,7 +42,7 @@
 .btn{width: fit-content;}
 
 
-#experience{width: 1330px; margin: 0 auto; margin-bottom: 130px;}
+#experience{max-width: 1330px; margin: 0 auto; margin-bottom: 130px;}
 .experience-container{display: flex; gap: 120px;}
 .section-heading h2{width: 468px; padding-left: 21px; border-left: 5px solid #FF900E;margin-bottom: 24px; font-size: 45px; font-weight: bold;}
 .section-heading p{line-height: 26px; margin-bottom: 30px;}

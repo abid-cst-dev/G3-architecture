@@ -68,12 +68,14 @@ header{width: 100%; background-color: rgba(255, 144, 14, 0.1); margin-bottom: 85
 
 /* FOOTER */
 
-footer{margin: 0 auto; width: 1240px; border-radius: 8px; background-color: rgba(255, 144, 14, 0.1); padding: 38px 350px; margin-bottom: 216px;}
+footer{margin: 0 auto; max-width: 1240px; border-radius: 8px; background-color: rgba(255, 144, 14, 0.1); padding: 38px 350px; margin-bottom: 216px;}
 .footer p{color: #424242; font-size: 1.1rem;}
 
 /* MEDIA QUERY */
 
 @media screen and (max-width:576px){
+
+    html,body{overflow-x: hidden;}
 
     header{margin-bottom: 40px;}
     .navbar,.logo{flex-direction: column; text-align: center; margin-bottom: 40px;}
@@ -89,10 +91,10 @@ footer{margin: 0 auto; width: 1240px; border-radius: 8px; background-color: rgba
 
     #experience{width: 100%;}
     .experience-container{flex-direction: column; gap: 20px;}
-    .image-container img{width: 100%;}
+    .image-container img{width: 100%; display: block;}
     .box{width: 95%; margin-inline: auto;}
     .section-heading h2{width: 100%;}
-    .section-heading p{width: 98%; margin-left: 10px;}
+    .section-heading p{width: 98%; margin-left: 0; padding-left: 10px;}
     .badge{padding: 43px 42px; border-radius: 8px; background-color: #FF900E; color: #FFFFFF; border: none; display: flex; flex-direction: column; position: absolute; margin-top: -130px; margin-left: 0;}
 
     #facts{width: 100%; margin-bottom: 40px; text-align: center;}
@@ -111,36 +113,33 @@ footer{margin: 0 auto; width: 1240px; border-radius: 8px; background-color: rgba
 @media screen and (min-width:577px) and (max-width:992px){
 
     html, body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     header {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 0 20px;
-    margin-bottom: 50px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px;
+        margin-bottom: 50px;
     }
 
     .heading-txt {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
     }
 
     .banner img {
-    width: 100%;
-    display: block;
+        width: 100%;
+        display: block;
     }
     
     .section-container {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 0 20px;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 20px;
     }
 
     .image-section {
@@ -154,8 +153,7 @@ footer{margin: 0 auto; width: 1240px; border-radius: 8px; background-color: rgba
     }
 
     #experience {
-    padding: 0 20px;
-    box-sizing: border-box;
+        padding: 0 20px;
     }
 
     .experience-container {
@@ -195,27 +193,18 @@ footer{margin: 0 auto; width: 1240px; border-radius: 8px; background-color: rgba
     .small { font-size: 1.1rem; }
 
     #facts {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px;
     }
 
-    #facts .icon-container {
-        display: grid !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+   #facts .icon-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 20px;
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        box-sizing: border-box;
     }
 
     #facts .icon-box {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        box-sizing: border-box;
         padding: 20px 10px;
     }
 
@@ -230,45 +219,35 @@ footer{margin: 0 auto; width: 1240px; border-radius: 8px; background-color: rgba
     }
 
     #sponsors {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 20px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px;
     }
 
     #sponsors .title,
     #sponsors .title p {
-        width: 100% !important;
-        max-width: 100% !important;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
     }
 
     #sponsors .sponsor-icons {
-        display: flex !important;
-        flex-wrap: wrap;              
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 30px 40px;
-        width: 100% !important;
-        max-width: 100% !important;
     }
 
     #sponsors .sponsor-icons img {
-        width: auto !important;
-        max-width: 120px;              
+        max-width: 120px;
         height: auto;
     }
 
-     footer {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 30px 20px !important;
-        margin: 0 auto !important;
-        margin-bottom: 40px !important;
-        box-sizing: border-box;
+    footer {
+        padding: 30px 20px;
+        margin: 0 auto 40px;
         border-radius: 0;
         text-align: center;
     }
-
 }
